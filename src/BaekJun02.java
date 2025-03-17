@@ -8,10 +8,10 @@ public class BaekJun02 {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("값을 입력하시오: ");
+        // System.out.println("값을 입력하시오: ");
         int a = sc.nextInt();
 
-        System.out.println("값을 입력하시오: ");
+        // System.out.println("값을 입력하시오: ");
         int b = sc.nextInt();
 
         System.out.println(a - b);
