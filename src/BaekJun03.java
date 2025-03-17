@@ -8,11 +8,11 @@ public class BaekJun03 {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("값을 입력하시오 : ");
-        int a = sc.nextInt();
+        // System.out.println("값을 입력하시오 : ");
+        double a = sc.nextDouble();  // double을 사용하여 소수점이하 자리수까지 표현함
 
-        System.out.println("값을 입력하시오 : ");
-        int b = sc.nextInt();
+        // System.out.println("값을 입력하시오 : ");
+        double b = sc.nextDouble();
 
         System.out.println(a / b);
 
