@@ -9,11 +9,12 @@ public class BaekJun02 {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("값을 입력하시오: ");
-        int A = sc.nextInt();
+        int a = sc.nextInt();
 
         System.out.println("값을 입력하시오: ");
-        int B = sc.nextInt();
+        int b = sc.nextInt();
 
-        System.out.println(A - B);
+        System.out.println(a - b);
+
     }
 }
