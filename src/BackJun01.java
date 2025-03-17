@@ -8,11 +8,13 @@ public class BackJun01 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);  // 사용자에게 값을 입력 받기 위해서 Scanner함수를 사용함
+
         System.out.println("값을 입력하시오 : ");
         int A = sc.nextInt();  // Scanner 함수에서 입력 받은 값을 int를 사용하여 정수형태로 변수 A에 넣음
 
         System.out.println("값을 입력하시오 : ");
         int B = sc.nextInt();  // Scanner 함수에서 입력 받은 값을 int를 사용하여 정수형태로 변수 B에 넣음
+
         System.out.println(A + B);  // 입력 받은 정수값을 + 로 연산하여 출력함
     }
 }
