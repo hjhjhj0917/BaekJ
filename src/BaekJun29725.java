@@ -1,27 +1,60 @@
-import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class BaekJun29725 {
+
+    static class ChessPoint {
+        char chess;
+        int point;
+
+        ChessPoint(char chess, int point) {
+            this.chess = chess;
+            this.point = point;
+        };
+
+        boolean check(char ches) {
+            return this.chess == ches;
+        }
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        String[][] chess = new String[8][8];
+        List<ChessPoint> points = List.of(
+                new ChessPoint('P', 1),
+                new ChessPoint('p', 1),
+                new ChessPoint('N', 3),
+                new ChessPoint('n', 3),
+                new ChessPoint('B', 3),
+                new ChessPoint('b', 3),
+                new ChessPoint('R', 5),
+                new ChessPoint('r', 5),
+                new ChessPoint('Q', 9),
+                new ChessPoint('q', 9)
+        );
+        int white = 0;
+        int black = 0;
 
         for (int i = 0; i < 8; i++) {
+            String line = sc.next();
+
             for (int j = 0; j < 8; j++) {
-                chess[i][j] = sc.nextLine();
+
+                for (ChessPoint po : points) {
+
+                    if (po.check(line.charAt(j))) {
+
+                        if(Character.isUpperCase(line.charAt(j))) {
+                            white += po.point;
+                        } else {
+                            black += po.point;
+                        }
+
+                        break;
+                    }
+                }
             }
         }
-        String[] flat = Arrays.stream(chess)
-                .flatMap(Arrays::stream)
-                .toArray(String[]::new);
-
-        Arrays.sort(flat);
-
-        for (int i = 0; i < 8; i++) {
-            for (int j = 0; j < 8; j++) {
-                System.out.println(chess[i][j]);
-            }
-        }
+        System.out.println(white - black);
     }
 }
