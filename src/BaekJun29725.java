@@ -38,13 +38,13 @@ public class BaekJun29725 {
         for (int i = 0; i < 8; i++) {
             String line = sc.next();
 
-            for (int j = 0; j < 8; j++) {
+            for (char c : line.toCharArray()) {
 
                 for (ChessPoint po : points) {
 
-                    if (po.check(line.charAt(j))) {
+                    if (po.check(c)) {
 
-                        if(Character.isUpperCase(line.charAt(j))) {
+                        if(Character.isUpperCase(c)) {
                             white += po.point;
                         } else {
                             black += po.point;
