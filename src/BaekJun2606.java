@@ -4,6 +4,8 @@ import java.util.Set;
 
 public class BaekJun2606 {
 
+    // 1번 컴퓨터를 통해 웜 바이러스에 걸리게 되는 컴퓨터의 수를 출력하는 프로그램을 작성하시오.
+
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -11,22 +13,20 @@ public class BaekJun2606 {
         int com = sc.nextInt();
         int num = sc.nextInt();
         Set<Integer> res = new HashSet<>();
+        res.add(1);
+
         sc.nextLine();
 
         for (int i = 0; i < num; i++) {
-            String line = sc.nextLine();
-            String[] str = line.split(" ");
+            int n1 = sc.nextInt();
+            int n2 = sc.nextInt();
 
-            int su1 = Integer.parseInt(str[0]);
-            int su2 = Integer.parseInt(str[1]);
-
-            if (su1 == 1) {
-                res.add(su2);
-            }
-            if (su2 == 1) {
-                res.add(su1);
+            if (res.contains(n1) || res.contains(n2)) {
+                res.add(n1);
+                res.add(n2);
             }
         }
-        System.out.println(res);
+        System.out.println(res.size()-1);
+        sc.close();
     }
 }
