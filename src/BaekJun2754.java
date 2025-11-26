@@ -1,0 +1,28 @@
+import java.util.Map;
+import java.util.Scanner;
+
+public class BaekJun2754 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        Map<String, Double> grade = Map.ofEntries(
+                Map.entry("A+", 4.3),
+                Map.entry("A0", 4.0),
+                Map.entry("A-", 3.7),
+                Map.entry("B+", 3.3),
+                Map.entry("B0", 3.0),
+                Map.entry("B-", 2.7),
+                Map.entry("C+", 2.3),
+                Map.entry("C0", 2.0),
+                Map.entry("C-", 1.7),
+                Map.entry("D+", 1.3),
+                Map.entry("D0", 1.0),
+                Map.entry("D-", 0.7),
+                Map.entry("F", 0.0)
+        );
+
+        String gradeStr = sc.nextLine();
+
+        System.out.println(grade.get(gradeStr));
+    }
+}
