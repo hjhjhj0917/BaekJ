@@ -15,5 +15,6 @@ public class BaekJun2921 {
         }
 
         System.out.println(result);
+        sc.close();
     }
 }
