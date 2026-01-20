@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class BaekJun2921 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+//      이번에는 성공하길!
 
         int num = sc.nextInt();
         int increase = 0;
