@@ -13,7 +13,6 @@ public class BaekJun2921 {
             increase += 3 + (3 * i);
             result += increase;
         }
-
         System.out.println(result);
         sc.close();
     }
