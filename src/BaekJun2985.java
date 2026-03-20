@@ -8,13 +8,37 @@ public class BaekJun2985 {
         int n2 = sc.nextInt();
         int n3 = sc.nextInt();
 
-        for (int i = 0; i < 4; i++) {
-
-            if (n1 + n2 == n3) break;
-            if (n1 - n2 == n3) break;
-            if (n1 * n2 == n3) break;
-            if (n1 / n2 == n3) break;
-
+        if (n1 + n2 == n3) {
+            System.out.println(n1 + "+" + n2 + "=" + n3);
+            return;
+        }
+        if (n1 - n2 == n3) {
+            System.out.println(n1 + "-" + n2 + "=" + n3);
+            return;
+        }
+        if (n1 * n2 == n3) {
+            System.out.println(n1 + "*" + n2 + "=" + n3);
+            return;
+        }
+        if (n1 / n2 == n3) {
+            System.out.println(n1 + "/" + n2 + "=" + n3);
+            return;
+        }
+        if (n1 == n2 + n3) {
+            System.out.println(n1 + "=" + n2 + "+" + n3);
+            return;
+        }
+        if (n1 == n2 - n3) {
+            System.out.println(n1 + "=" + n2 + "-" + n3);
+            return;
+        }
+        if (n1 == n2 * n3) {
+            System.out.println(n1 + "=" + n2 + "*" + n3);
+            return;
+        }
+        if (n1 == n2 / n3) {
+            System.out.println(n1 + "=" + n2 + "/" + n3);
+            return;
         }
     }
 }
